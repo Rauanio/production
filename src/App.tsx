@@ -11,7 +11,7 @@ export const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={classNames('app', {}, [theme])}>
+    <div className={classNames('app', {hovered: true}, [theme])}>
       <button onClick={toggleTheme}>Toggle</button>
       <Link to="/">Главная</Link>
       <Link to="/about">О нас</Link>
