@@ -11,7 +11,7 @@ export const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <button onClick={toggleTheme}>Toggle</button>
       <Link to="/">Главная</Link>
-      <Link to="/about">О нас</Link>
+      <Link to="/about">О вас</Link>
       <AppRouter />
     </div>
   );
