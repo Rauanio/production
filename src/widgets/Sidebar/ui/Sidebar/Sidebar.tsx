@@ -11,15 +11,25 @@ export interface SidebarProps {
 
 export const Sidebar = ({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = React.useState(false);
-    const { t } = useTranslation('sidebar');
+    const { t } = useTranslation();
 
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
 
     return (
-        <div className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <button type="button" onClick={onToggle}>{t('Активировать')}</button>
+        <div className={classNames(
+            cls.Sidebar,
+            { [cls.collapsed]: collapsed },
+            [className],
+        )}
+        >
+            <button
+                type="button"
+                onClick={onToggle}
+            >
+                {t('Активировать')}
+            </button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} />
