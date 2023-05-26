@@ -4,5 +4,8 @@
     "Главная страница" : "Main Page",
     "Язык": "English",
     "Активировать": "Toggle",
-    "Страница не найдена": "Page not found"
+    "Страница не найдена": "Page not found",
+    "О сайте": "About us",
+    "Перезагрузить": "Reload",
+    "Произошла ошибка": "Oops... An error has occurred, please try reloading the page"
 }

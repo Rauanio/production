@@ -8,7 +8,6 @@ className?: string;
 export const Loader = ({ className }: LoaderProps) => {
     return (
         <div className={classNames('lds-roller', {}, [className])}>
-            <div />
             <div className="lds-roller">
                 <div />
                 <div />
