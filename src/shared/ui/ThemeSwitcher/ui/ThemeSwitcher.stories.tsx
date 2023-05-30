@@ -11,7 +11,7 @@ export default {
     },
 } as ComponentMeta<typeof ThemeSwitcher>;
 
-const Template: ComponentStory<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
+const Template: ComponentStory<typeof ThemeSwitcher> = (args:any) => <ThemeSwitcher {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};
