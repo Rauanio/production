@@ -1,11 +1,12 @@
 {
     "Тестовый пример" : "Test example",
     "Перевод" : "Translate",
-    "Главная страница" : "Main Page",
+    "Главная" : "Main",
     "Язык": "English",
     "Активировать": "Toggle",
     "Страница не найдена": "Page not found",
     "О сайте": "About us",
     "Перезагрузить": "Reload",
-    "Произошла ошибка": "Oops... An error has occurred, please try reloading the page"
+    "Произошла ошибка": "Oops... An error has occurred, please try reloading the page",
+    "Сокращенный язык": "En"
 }
