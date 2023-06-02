@@ -9,5 +9,7 @@
     "Перезагрузить": "Reload",
     "Произошла ошибка": "Oops... An error has occurred, please try reloading the page",
     "Сокращенный язык": "En",
-    "Войти": "Login"
+    "Войти": "Login",
+    "Имя пользавателя": "Username",
+    "Пароль": "Password"
 }
