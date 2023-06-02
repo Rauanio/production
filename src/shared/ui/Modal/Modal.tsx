@@ -15,7 +15,6 @@ export const Modal = (props: ModalProps) => {
     const { className, children, isOpen, onClose } = props;
     const [isClosing, setIsClosing] = React.useState(false);
     const timerRef = React.useRef<ReturnType<typeof setTimeout>>();
-    const { theme } = useTheme();
 
     const closeHandler = React.useCallback(() => {
         if (onClose) {
@@ -51,7 +50,6 @@ export const Modal = (props: ModalProps) => {
     const mods:Record<string, boolean> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
-        [cls[theme]]: true,
     };
 
     return (
