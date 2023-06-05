@@ -11,5 +11,8 @@
     "Сокращенный язык": "En",
     "Войти": "Login",
     "Имя пользавателя": "Username",
-    "Пароль": "Password"
+    "Пароль": "Password",
+    "Форма авторизаций": "Authorization form",
+    "Ошибка при авторизаций": "You entered the wrong username or password",
+    "Выйти": "Logout"
 }
