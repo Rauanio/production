@@ -48,7 +48,7 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to'],
+            ignoreAttribute: ['data-testid', 'to', 'name'],
         }],
         'max-len': ['error', {
             ignoreComments: true,
