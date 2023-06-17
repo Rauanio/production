@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { Dispatch } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { userActions } from 'entities/user';
@@ -18,7 +17,6 @@ describe('loginByUsername', () => {
         const userValue = { username: 'admin', id: '1' };
         const thunk = new TestAsyncThunk(loginByUsername);
         thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));
-
         const result = await thunk.callThunk({ username: 'admin', password: 'qwerty123' });
 
         expect(thunk.dispatch).toHaveBeenCalledWith(userActions.setAuthData(userValue));
@@ -31,7 +29,6 @@ describe('loginByUsername', () => {
     test('error login', async () => {
         const thunk = new TestAsyncThunk(loginByUsername);
         thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
-
         const result = await thunk.callThunk({ username: 'admin', password: 'qwerty123' });
 
         expect(thunk.dispatch).toHaveBeenCalledTimes(2);
