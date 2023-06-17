@@ -3,7 +3,7 @@ import { getLoginIsLoading } from './getLoginIsLoading';
 
 describe('getLoginIsLoading', () => {
     test('should return true', () => {
-        const state: Partial<StateSchema> = {
+        const state: DeepPartial<StateSchema> = {
             loginForm: {
                 isLoading: true,
                 username: '',
@@ -13,7 +13,7 @@ describe('getLoginIsLoading', () => {
         expect(getLoginIsLoading(state as StateSchema)).toEqual(true);
     });
     test('should return false', () => {
-        const state: Partial<StateSchema> = {};
+        const state: DeepPartial<StateSchema> = {};
         expect(getLoginIsLoading(state as StateSchema)).toEqual(false);
     });
 });
