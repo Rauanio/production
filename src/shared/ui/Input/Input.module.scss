@@ -6,6 +6,8 @@
     width: 100%;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
+    border-radius: 5px;
+    padding: 5px;
 
     &:focus {
         outline: var(--primary-color);

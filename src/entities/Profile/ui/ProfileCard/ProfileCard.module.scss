@@ -1,0 +1,26 @@
+.ProfileCard {
+    padding: 20px;
+    border: 2px solid var(--inverted-bg-color);
+}
+
+// .profileTitle {
+//     font-weight: 700;
+// }
+
+.headers {
+    display: flex;
+}
+
+.data {
+    margin-top: 20px;
+    display: flex;
+}
+
+.editBtn {
+    margin-left: auto;
+}
+
+.input {
+    max-width: 300px;
+    margin-right: 50px;
+}
