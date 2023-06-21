@@ -2,5 +2,11 @@
     "Профиль пользователя": "User profile",
     "Редактировать": "Edit",
     "Имя": "Name",
-    "Фамилия": "Surname"
+    "Фамилия": "Surname",
+    "Возраст": "Age",
+    "Город": "City",
+    "Имя пользователя": "Username",
+    "Ссылка на изображение": "Image url",
+    "Ошибка в профиле": "There was an error loading profile",
+    "Перезагрузка": "Try to reload page"
 }
