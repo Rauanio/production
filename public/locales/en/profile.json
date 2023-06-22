@@ -8,5 +8,12 @@
     "Имя пользователя": "Username",
     "Ссылка на изображение": "Image url",
     "Ошибка в профиле": "There was an error loading profile",
-    "Перезагрузка": "Try to reload page"
+    "Перезагрузка": "Try to reload page",
+    "Некорректное имя или фамилия": "Incorrect name or surname feild",
+    "Некорректный возраст": "Incorrect age feild",
+    "Некорректный город": "Incorrect city feild",
+    "Некорректное имя пользователя": "Incorrect username feild",
+    "Некорректная ссылка на изоброжение": "Incorrect image url feild",
+    "Данные не указаны": "Data not specified",
+    "Серверная ошибка": "Server error"
 }
