@@ -35,7 +35,9 @@ const ProfilePage = memo(() => {
     const validateErrors = useSelector(getProfileValidateErrors);
 
     React.useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const validateErrorTranslates = {
