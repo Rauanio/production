@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator';
-import avatarImg from 'shared/assets/tests/storybook.jpg';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import ProfilePage from './ProfilePage';
@@ -22,7 +20,6 @@ Light.decorators = [StoreDecorator({
     profile: {
         form: {
             age: 20,
-            avatar: avatarImg,
             city: 'Pavlodar',
             name: 'Rauan',
             surname: 'Mudegeev',

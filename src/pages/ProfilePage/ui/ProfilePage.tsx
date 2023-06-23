@@ -85,7 +85,7 @@ const ProfilePage = memo(() => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <ProfilePageHeader />
+
             {validateErrors?.length && validateErrors.map((err) => (
                 <Text
                     key={err}
@@ -107,6 +107,7 @@ const ProfilePage = memo(() => {
                 onChangeCurrency={onChangeCurrency}
                 onChangeCountry={onChangeCountry}
             />
+            <ProfilePageHeader />
         </DynamicModuleLoader>
 
     );

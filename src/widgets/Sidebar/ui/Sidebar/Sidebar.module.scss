@@ -1,9 +1,11 @@
 .Sidebar {
-    height: calc(100vh - var(--navbar-height));
+    height: 100vh;
     width: var(--sidebar-width);
-    background: var(--inverted-bg-color);
+    background: var(--bg-color);
     position: relative;
     transition: width 0.3s;
+    margin-top: calc(var(--navbar-height) * -1);
+    border-right: 1px solid var(--border-color);
 }
 
 .switchers {
@@ -16,10 +18,11 @@
 }
 
 .theme {
-    transition: transform 0.5s;
+    transition: transform 0.5s, fill 0.5s;
 }
 
 .theme:hover {
+    fill: var(--accent-color);
     transform: scale(1.2);
 }
 
@@ -29,8 +32,13 @@
 
 .collapseBtn {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     right: -32px;
     bottom: 32px;
+    color: var(--accent-color);
+    border: 2px solid var(--border-color);
 }
 
 .items {

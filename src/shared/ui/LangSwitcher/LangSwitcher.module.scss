@@ -1,0 +1,7 @@
+.LangSwitcher {
+    transition: transform 0.5s, color 0.5s;
+}
+
+.LangSwitcher:hover {
+    color: var(--accent-color);
+}

@@ -30,7 +30,6 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
 
     return (
         <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
-            <Text title={t('Профиль пользователя')} />
             {readonly ? (
                 <Button
                     theme={ThemeButton.OUTLINE}
@@ -58,7 +57,6 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                 </div>
 
             )}
-
         </div>
     );
 };

@@ -22,7 +22,7 @@ export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
 
     return (
         <AppLink
-            theme={AppLinkTheme.INVERTED}
+            theme={AppLinkTheme.PRIMARY}
             to={item.path}
             className={classNames(cls.item, { [cls.collapsed]: collapsed })}
         >

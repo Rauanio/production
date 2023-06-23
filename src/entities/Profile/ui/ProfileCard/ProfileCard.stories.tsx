@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import avatarImg from 'shared/assets/tests/storybook.jpg';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import { ProfileCard } from './ProfileCard';
@@ -18,7 +17,6 @@ export const Primary = Template.bind({});
 Primary.args = {
     data: {
         age: 20,
-        avatar: avatarImg,
         city: 'Pavlodar',
         name: 'Rauan',
         surname: 'Mudegeev',
@@ -33,7 +31,7 @@ Error.args = {
     error: 'err',
 };
 
-export const isLoading = Template.bind({});
-isLoading.args = {
+export const IsLoading = Template.bind({});
+IsLoading.args = {
     isLoading: true,
 };

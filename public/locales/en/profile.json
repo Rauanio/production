@@ -1,5 +1,4 @@
 {
-    "Профиль пользователя": "User profile",
     "Редактировать": "Edit",
     "Имя": "Name",
     "Фамилия": "Surname",
@@ -15,5 +14,7 @@
     "Некорректное имя пользователя": "Incorrect username feild",
     "Некорректная ссылка на изоброжение": "Incorrect image url feild",
     "Данные не указаны": "Data not specified",
-    "Серверная ошибка": "Server error"
+    "Серверная ошибка": "Server error",
+    "Укажите валюту": "Select currency",
+    "Укажите страну": "Select country"
 }
