@@ -15,5 +15,6 @@
     "Форма авторизаций": "Authorization form",
     "Ошибка при авторизаций": "You entered the wrong username or password",
     "Выйти": "Logout",
-    "Профиль": "Profile"
+    "Профиль": "Profile",
+    "Статьи": "Articles"
 }
