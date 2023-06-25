@@ -22,7 +22,7 @@
 
 .collapsed {
     .link {
-        opacity: 0;
+        display: none;
         transition: 0.3s opacity;
         width: 0;
     }
