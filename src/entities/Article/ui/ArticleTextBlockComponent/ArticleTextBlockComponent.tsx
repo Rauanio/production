@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { ArticleBlock, ArticleTextBlock } from 'entities/Article/model/types/article';
-import { Text } from 'shared/ui/Text/Text';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import cls from './ArticleTextBlockComponent.module.scss';
 
 export interface ArticleTextBlockComponentProps {
@@ -14,6 +14,7 @@ export const ArticleTextBlockComponent = ({ className, block }: ArticleTextBlock
         <div className={classNames(cls.ArticleTextBlockComponent, {}, [className])}>
             { block.title && (
                 <Text
+                    size={TextSize.L}
                     className={cls.title}
                     title={block.title}
 

@@ -19,11 +19,11 @@
 
 .theme {
     transition: transform 0.5s, fill 0.5s;
-}
 
-.theme:hover {
-    fill: var(--accent-color);
-    transform: scale(1.2);
+    &:hover {
+        fill: var(--accent-color);
+        transform: scale(1.2);
+    }
 }
 
 .lang {

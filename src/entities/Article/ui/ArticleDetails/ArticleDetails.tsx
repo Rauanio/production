@@ -11,7 +11,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
 import EyeIcon from 'shared/assets/icons/visibility.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
-import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 import {
     getArticleDetailsData,
     getArticleDetailsError,
@@ -42,9 +42,9 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     const renderBlock = useCallback((block: ArticleBlock) => {
         switch (block.type) {
         case ArticleBlockType.CODE:
-            return <ArticleCodeBlockComponent />;
+            return <ArticleCodeBlockComponent block={block} />;
         case ArticleBlockType.IMAGE:
-            return <ArticleImageBlockComponent />;
+            return <ArticleImageBlockComponent block={block} />;
         case ArticleBlockType.TEXT:
             return <ArticleTextBlockComponent block={block} />;
         default:
@@ -87,27 +87,32 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
                     text={article?.subtitle}
                     size={TextSize.L}
                 />
-                <div className={cls.articleInfo}>
-                    <Icon
-                        className={cls.icon}
-                        Svg={EyeIcon}
-                    />
-                    <Text text={String(article?.views)} />
+                <div className={cls.infoWrapper}>
+                    <div className={cls.articleInfo}>
+                        <Icon
+                            className={cls.icon}
+                            Svg={EyeIcon}
+                        />
+                        <Text text={String(article?.views)} />
+                    </div>
+                    <div className={cls.articleInfo}>
+                        <Icon
+                            className={cls.icon}
+                            Svg={CalendarIcon}
+                        />
+                        <Text text={article?.createdAt} />
+                    </div>
                 </div>
-                <div className={cls.articleInfo}>
-                    <Icon
-                        className={cls.icon}
-                        Svg={CalendarIcon}
-                    />
-                    <Text text={article?.createdAt} />
-                </div>
+
                 {article?.blocks.map(renderBlock)}
             </>
         );
     }
 
     React.useEffect(() => {
-        dispatch(fetchArticleById(id));
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchArticleById(id));
+        }
     }, [dispatch, id]);
 
     return (

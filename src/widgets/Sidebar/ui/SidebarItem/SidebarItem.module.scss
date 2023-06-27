@@ -8,11 +8,11 @@
 .link {
     margin-left: 10px;
     opacity: 1;
-    transition: color 0.5s;
-}
+    transition: color 0.3s;
 
-.link:hover {
-    color: var(--accent-color);
+    &:hover {
+        color: var(--accent-color);
+    }
 }
 
 .icon {

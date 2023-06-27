@@ -19,9 +19,14 @@
 .articleInfo {
     display: flex;
     align-items: center;
+    margin-right: 15px;
+}
+
+.infoWrapper {
+    display: flex;
 }
 
 .icon {
     width: 20px;
-    margin-right: 8px;
+    margin-right: 5px;
 }
