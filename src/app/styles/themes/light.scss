@@ -1,10 +1,21 @@
 :root {
+    // Бэкграунд
     --bg-color: #f7f8f8;
     --inverted-bg-color: #0e141b;
+
+    // Основной цвет
     --primary-color: #111827;
     --inverted-primary-color: #eaedf3;
+
+    // Вторичный цвет
     --secondary-color: rgb(1 4 9);
     --inverted-secondary-color: rgb(234 237 243);
+
+    // Акцентный цвет
     --border-color: #d9dbdb;
     --accent-color: rgb(0 108 172);
+
+    // Скелетон
+    --skeleton-color: #e2e2e2;
+    --skeleton-shadow: rgba(0 0 0 / 20%);
 }
