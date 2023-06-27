@@ -8,6 +8,8 @@ export interface ArticleImageBlockComponentProps {
 export const ArticleImageBlockComponent = ({ className }: ArticleImageBlockComponentProps) => {
     const { t } = useTranslation();
     return (
-        <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])} />
+        <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])}>
+            ArticleImageBlockComponent
+        </div>
     );
 };

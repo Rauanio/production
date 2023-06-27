@@ -8,6 +8,8 @@ export interface ArticleCodeBlockComponentProps {
 export const ArticleCodeBlockComponent = ({ className }: ArticleCodeBlockComponentProps) => {
     const { t } = useTranslation();
     return (
-        <div className={classNames(cls.ArticleCodeBlockComponent, {}, [className])} />
+        <div className={classNames(cls.ArticleCodeBlockComponent, {}, [className])}>
+            ArticleCodeBlockComponent
+        </div>
     );
 };
