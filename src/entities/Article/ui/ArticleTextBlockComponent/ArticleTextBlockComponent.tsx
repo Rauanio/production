@@ -9,7 +9,6 @@ export interface ArticleTextBlockComponentProps {
     block: ArticleTextBlock
 }
 export const ArticleTextBlockComponent = ({ className, block }: ArticleTextBlockComponentProps) => {
-    const { t } = useTranslation();
     return (
         <div className={classNames(cls.ArticleTextBlockComponent, {}, [className])}>
             { block.title && (
@@ -22,7 +21,7 @@ export const ArticleTextBlockComponent = ({ className, block }: ArticleTextBlock
             )}
             {block.paragraphs.map((paragraph) => (
                 <Text
-                    key={paragraph}
+                    key={Math.random()}
                     text={paragraph}
                     className={cls.paragraph}
                 />

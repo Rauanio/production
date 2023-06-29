@@ -13,11 +13,17 @@
     right: 20px;
 }
 
+.copiedIcon {
+    width: 30px;
+}
+
 .copyIcon {
     width: 25px;
-    transition: transform 0.3s;
+    transition: transform 0.5s, fill 0.5s;
+    fill: var(--primary-color);
 
     &:hover {
         transform: scale(1.1);
+        fill: var(--accent-color);
     }
 }

@@ -22,7 +22,7 @@ const reducers: ReducersList = {
 };
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
-    const { t } = useTranslation('article');
+    const { t } = useTranslation('article_details');
     const { id } = useParams<{id: string}>();
     const dispatch = useAppDispatch();
     const comments = useSelector(getArticleComments.selectAll);

@@ -11,8 +11,10 @@ export interface CommentListProps {
     comments?: Comment[]
     isLoading?: boolean
 }
+
 export const CommentList = memo(({ className, comments, isLoading }: CommentListProps) => {
     const { t } = useTranslation('article_details');
+
     return (
         <div className={classNames(cls.CommentList, {}, [className])}>
             {comments?.length

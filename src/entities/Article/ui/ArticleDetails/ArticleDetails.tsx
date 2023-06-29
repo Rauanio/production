@@ -33,7 +33,7 @@ const reducers: ReducersList = {
 };
 
 export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
-    const { t } = useTranslation('article');
+    const { t } = useTranslation('article_details');
     const dispatch = useAppDispatch();
     const article = useSelector(getArticleDetailsData);
     const error = useSelector(getArticleDetailsError);

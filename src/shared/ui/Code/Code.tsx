@@ -33,7 +33,7 @@ export const Code = memo(({ className, text }: CodeProps) => {
                     ? (
                         <Icon
                             Svg={CheckedIcon}
-                            className={cls.copyIcon}
+                            className={cls.copiedIcon}
                         />
                     )
                     : (
