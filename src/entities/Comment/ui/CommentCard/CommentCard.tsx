@@ -11,7 +11,7 @@ import cls from './CommentCard.module.scss';
 
 export interface CommentCardProps {
     className?: string;
-    comment: Comment
+    comment?: Comment
     isLoading?: boolean
 }
 
@@ -26,6 +26,10 @@ export const CommentCard = memo(({ className, comment, isLoading }: CommentCardP
                 <Skeleton className={cls.text} height={50} width="100%" />
             </div>
         );
+    }
+
+    if (!comment) {
+        return null;
     }
 
     return (
