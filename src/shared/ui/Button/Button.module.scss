@@ -1,9 +1,16 @@
 .Button {
     cursor: pointer;
-    color: var(--primary-color);
-    padding: 4px 15px;
+    padding: 6px 15px;
     font-weight: 600 !important;
-    border-radius: 4px;
+    border-radius: 5px;
+}
+
+.clear {
+    color: var(--primary-color);
+}
+
+.clearInverted {
+    color: var(--inverted-primary-color);
 }
 
 .clear,
@@ -15,38 +22,53 @@
     background: none;
 }
 
-.clearInverted {
-    color: var(--inverted-primary-color);
-}
-
 .outline {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
-    background: none;
 }
 
 .outlineInverted {
     border: 1px solid var(--inverted-primary-color);
     color: var(--inverted-primary-color);
-    background: none;
 }
 
 .outlineRed {
     border: 1px solid var(--red-light);
-    color: var(--red-light);
-    background: none;
+    color: var(--red-dark);
 }
 
 .background {
     background-color: var(--bg-color);
     color: var(--primary-color);
-    border: none;
 }
 
 .backgroundInverted {
     background-color: var(--inverted-bg-color);
     color: var(--inverted-primary-color);
+}
+
+.contained {
+    background-color: var(--btn-contained-color);
+    color: #eaedf3;
     border: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.outline,
+.outlineInverted,
+.outlineRed,
+.background,
+.backgroundInverted {
+    background: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
 .square {
