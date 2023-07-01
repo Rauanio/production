@@ -65,12 +65,19 @@
       "userId": "2",
       "text": "rrrrrrrrr",
       "id": "sJWAkiH"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "123",
+      "id": "x03FBTg"
     }
   ],
   "articles": [
     {
       "id": "1",
       "title": "Javascript news",
+      "userId": "1",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://yt3.ggpht.com/ytc/AAUvwnhKwOuCqaYgI52PIs1hz1JN_9Iz7NZfECu_FE-YMQ=s900-c-k-c0x00ffffff-no-rj",
       "views": 1022,

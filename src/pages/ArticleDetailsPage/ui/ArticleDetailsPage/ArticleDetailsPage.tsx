@@ -1,6 +1,6 @@
 import { ArticleDetails } from 'entities/Article';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
@@ -10,6 +10,10 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { useCallback } from 'react';
+import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Icon } from 'shared/ui/Icon/Icon';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import ArrowIcon from 'shared/assets/icons/arrow.svg';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle';
 import { getArticleCommentsIsLoading } from '../../model/selectors/getArticleComments';
@@ -28,12 +32,17 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article_details');
     const { id } = useParams<{id: string}>();
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
     const comments = useSelector(getArticleComments.selectAll);
     const isLoading = useSelector(getArticleCommentsIsLoading);
 
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
+
+    const onBackToArticles = useCallback(() => {
+        navigate(RoutePath.article);
+    }, [navigate]);
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
@@ -50,6 +59,12 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+                <Button
+                    theme={ThemeButton.CLEAR}
+                    onClick={onBackToArticles}
+                >
+                    <Icon className={cls.backIcon} Svg={ArrowIcon} />
+                </Button>
                 <ArticleDetails id={id} />
                 <Text
                     title={t('Комментарий')}

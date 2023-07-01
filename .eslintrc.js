@@ -30,6 +30,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'react/react-in-jsx-scope': 'off',
+        "react/no-array-index-key": 'off',
         'linebreak-style': 'off',
         'no-unused-vars': 'off',
         'react/require-default-props': 'off',
