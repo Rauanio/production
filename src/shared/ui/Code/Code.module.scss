@@ -1,7 +1,4 @@
 .Code {
-    padding: 15px;
-    background: var(--bg-code);
-    border-radius: 0.5rem;
     margin-top: 20px;
     position: relative;
     overflow: auto;
@@ -15,15 +12,30 @@
 
 .copiedIcon {
     width: 30px;
+    margin-right: 5px;
+    fill: rgb(40 200 72);
+}
+
+.copied {
+    display: flex;
+    align-items: center;
+    cursor: default;
+    color: #eaedf3;
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: #eaedf3;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .copyIcon {
     width: 25px;
-    transition: transform 0.3s ease, fill 0.3s ease;
-    fill: var(--primary-color);
-
-    &:hover {
-        transform: scale(1.1);
-        fill: var(--accent-color);
-    }
+    margin-right: 5px;
+    fill: #eaedf3;
 }

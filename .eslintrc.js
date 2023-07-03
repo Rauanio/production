@@ -30,7 +30,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'react/react-in-jsx-scope': 'off',
-        "react/no-array-index-key": 'off',
+        'react/no-array-index-key': 'off',
         'linebreak-style': 'off',
         'no-unused-vars': 'off',
         'react/require-default-props': 'off',
@@ -50,7 +50,7 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'name'],
+            ignoreAttribute: ['data-testid', 'to', 'name', 'language'],
         }],
         'max-len': ['error', {
             ignoreComments: true,
