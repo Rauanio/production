@@ -14,6 +14,7 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import ArrowIcon from 'shared/assets/icons/arrow.svg';
+import { Wrapper } from 'shared/ui/Wrapper/Wrapper';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle';
 import { getArticleCommentsIsLoading } from '../../model/selectors/getArticleComments';
@@ -58,7 +59,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Wrapper className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button
                     theme={ThemeButton.CLEAR}
                     onClick={onBackToArticles}
@@ -75,7 +76,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                     isLoading={isLoading}
                     comments={comments}
                 />
-            </div>
+            </Wrapper>
         </DynamicModuleLoader>
 
     );

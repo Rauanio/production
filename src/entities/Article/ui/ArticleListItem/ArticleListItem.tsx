@@ -5,6 +5,7 @@ import { Text } from 'shared/ui/Text/Text';
 import { Icon } from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/visibility.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
+import DotIcon from 'shared/assets/icons/dot.svg';
 import { Card } from 'shared/ui/Card/Card';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button } from 'shared/ui/Button/Button';
@@ -28,7 +29,13 @@ export const ArticleListItem = memo(({ className, article, view }: ArticleListIt
         navigate(RoutePath.article_details + article.id);
     }, [article.id, navigate]);
 
-    const types = <Text className={cls.types} text={article.type.join(', ')} />;
+    const types = (
+        <div className={cls.type}>
+            <Icon Svg={DotIcon} className={cls.typeIcon} />
+            <Text className={cls.types} text={article.type.join(', ')} />
+        </div>
+    );
+
     const views = (
         <>
             <Icon className={cls.icon} Svg={EyeIcon} />

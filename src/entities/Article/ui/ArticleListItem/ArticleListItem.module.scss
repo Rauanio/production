@@ -17,7 +17,7 @@
     }
 
     .infoWrapper {
-        padding: 15px;
+        padding: 0 15px 15px;
     }
 
     .cardInfo {
@@ -30,6 +30,16 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .type {
+        display: flex;
+        align-items: center;
+    }
+
+    .typeIcon {
+        width: 15px;
+        margin-right: 5px;
     }
 
     .icon {
@@ -54,6 +64,16 @@
 .LIST {
     width: 100%;
     margin-bottom: 30px;
+
+    .type {
+        display: flex;
+        align-items: center;
+    }
+
+    .typeIcon {
+        width: 20px;
+        margin-right: 5px;
+    }
 
     .card {
         padding: 20px;
