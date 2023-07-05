@@ -14,7 +14,7 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import ArrowIcon from 'shared/assets/icons/arrow.svg';
-import { Wrapper } from 'shared/ui/Wrapper/Wrapper';
+import { Wrapper } from 'widgets/Wrapper/Wrapper';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle';
 import { getArticleCommentsIsLoading } from '../../model/selectors/getArticleComments';

@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { Wrapper } from 'shared/ui/Wrapper/Wrapper';
+import { Wrapper } from 'widgets/Wrapper/Wrapper';
 import cls from './NotFoundPage.module.scss';
 
 export interface NotFoundPageProps {
