@@ -71,6 +71,12 @@
       "userId": "1",
       "text": "123",
       "id": "x03FBTg"
+    },
+    {
+      "articleId": "2",
+      "userId": "1",
+      "text": "vava popa",
+      "id": "O5Dm3H5"
     }
   ],
   "articles": [
@@ -155,7 +161,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "type": [
-        "IT", 
+        "IT",
         "TECHNOLOGY"
       ],
       "blocks": [

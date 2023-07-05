@@ -19,9 +19,9 @@ export const ArticleTextBlockComponent = ({ className, block }: ArticleTextBlock
 
                 />
             )}
-            {block.paragraphs.map((paragraph) => (
+            {block.paragraphs.map((paragraph, index) => (
                 <Text
-                    key={Math.random()}
+                    key={index}
                     text={paragraph}
                     className={cls.paragraph}
                 />

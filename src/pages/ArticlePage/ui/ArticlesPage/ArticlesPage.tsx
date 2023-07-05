@@ -7,8 +7,10 @@ import { useSelector } from 'react-redux';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader';
 import { Wrapper } from 'shared/ui/Wrapper/Wrapper';
 import { fetchNextArticles } from 'pages/ArticlePage/model/services/fetchNextArticles';
+import { initArticles } from 'pages/ArticlePage/model/services/initArticles';
 import {
     getArticlesError,
+    getArticlesInited,
     getArticlesIsLoading,
     getArticlesView,
 } from '../../model/selectors/getArticles';
@@ -32,10 +34,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const view = useSelector(getArticlesView);
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initState());
-        dispatch(fetchArticles({
-            page: 1,
-        }));
+        dispatch(initArticles());
     });
 
     const onLoadNextPage = useCallback(() => {
@@ -47,7 +46,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Wrapper
                 onScrollEnd={onLoadNextPage}
                 className={classNames(cls.ArticlesPage, {}, [className])}
