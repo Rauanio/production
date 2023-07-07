@@ -45,12 +45,13 @@ module.exports = {
         'object-curly-newline': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
+        'jsx-a11y/label-has-associated-control': 'off',
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'name', 'language'],
+            ignoreAttribute: ['data-testid', 'to', 'name', 'language', 'border'],
         }],
         'max-len': ['error', {
             ignoreComments: true,

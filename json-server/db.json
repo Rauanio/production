@@ -231,8 +231,8 @@
       "userId": "1",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 705,
+      "createdAt": "26.06.2022",
       "type": [
         "IT",
         "LIBRARY"
@@ -252,12 +252,12 @@
     },
     {
       "id": "4",
-      "title": "React query",
+      "title": "React js",
       "userId": "1",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://code-dev.fb.com/wp-content/uploads/2017/09/gd6howhhcsnjy7ceaaaaaadduae0bj0jaaab.jpg",
+      "views": 500,
+      "createdAt": "26.02.2021",
       "type": [
         "IT",
         "LIBRARY"
@@ -277,12 +277,12 @@
     },
     {
       "id": "5",
-      "title": "React query",
+      "title": "Node js",
       "userId": "1",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://haitran1999.github.io/My-website/images/ExpressJS%20(1).jpg",
+      "views": 902,
+      "createdAt": "26.02.2019",
       "type": [
         "IT",
         "LIBRARY"
@@ -302,11 +302,11 @@
     },
     {
       "id": "6",
-      "title": "React query",
+      "title": "HTML",
       "userId": "1",
       "subtitle": "Что нового в JS за 2022 год?",
-      "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
-      "views": 1022,
+      "img": "https://storage.needpix.com/rsynced_images/logo-2582748_1280.png",
+      "views": 1609,
       "createdAt": "26.02.2022",
       "type": [
         "IT",

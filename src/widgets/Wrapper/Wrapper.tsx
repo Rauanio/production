@@ -48,7 +48,7 @@ export const Wrapper = memo(({ className, children, onScrollEnd, ...otherProps }
             className={classNames(cls.wrapper, {}, [className])}
         >
             {children}
-            <div ref={triggerRef} />
+            {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </section>
     );
 });

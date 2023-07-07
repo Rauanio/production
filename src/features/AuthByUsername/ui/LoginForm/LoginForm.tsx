@@ -51,22 +51,28 @@ const LoginForm = memo(({ className, onSucces }: LoginFormProps) => {
     return (
         <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>
             <div className={classNames(cls.LoginForm, {}, [className])}>
-                <Text title={t('Форма авторизаций')} />
+                <Text className={cls.title} title={t('Форма авторизаций')} />
                 {error && <Text text={t('Ошибка при авторизаций')} theme={TextTheme.ERROR} />}
-                <Input
-                    type="text"
-                    placeholder={t('Имя пользавателя')}
-                    className={cls.input}
-                    onChange={onChangeUsername}
-                    value={username}
-                />
-                <Input
-                    type="text"
-                    placeholder={t('Пароль')}
-                    className={cls.input}
-                    onChange={onChangePassword}
-                    value={password}
-                />
+                <label>
+                    {t('Имя пользавателя')}
+                    <Input
+                        type="text"
+                        placeholder={t('Имя пользавателя')}
+                        className={cls.input}
+                        onChange={onChangeUsername}
+                        value={username}
+                    />
+                </label>
+                <label>
+                    {t('Пароль')}
+                    <Input
+                        type="text"
+                        placeholder={t('Пароль')}
+                        className={cls.input}
+                        onChange={onChangePassword}
+                        value={password}
+                    />
+                </label>
                 <Button
                     theme={ThemeButton.OUTLINE}
                     className={cls.loginBtn}

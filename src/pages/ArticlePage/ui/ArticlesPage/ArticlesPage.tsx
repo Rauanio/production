@@ -17,6 +17,7 @@ import {
 import { fetchArticles } from '../../model/services/fetchArticles';
 import { articlesPageActions, articlesPageReducer, getArticle } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 
 export interface ArticlesPageProps {
     className?: string;
@@ -41,17 +42,13 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
         dispatch(fetchNextArticles());
     }, [dispatch]);
 
-    const onChangeView = useCallback((view: ArticleView) => {
-        dispatch(articlesPageActions.setView(view));
-    }, [dispatch]);
-
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Wrapper
                 onScrollEnd={onLoadNextPage}
                 className={classNames(cls.ArticlesPage, {}, [className])}
             >
-                <ArticleViewSelector view={view} onClickView={onChangeView} />
+                <ArticlesPageFilters />
                 <ArticleList
                     isLoading={isLoading}
                     view={view}
