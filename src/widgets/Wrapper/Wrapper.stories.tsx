@@ -1,17 +1,17 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ArticleSort } from './ArticleSort';
+import { Wrapper } from './Wrapper';
 
 export default {
-    title: 'pages/ArticleSort',
-    component: ArticleSort,
+    title: 'pages/Wrapper',
+    component: Wrapper,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticleSort>;
+} as ComponentMeta<typeof Wrapper>;
 
-const Template: ComponentStory<typeof ArticleSort> = (args) => <ArticleSort {...args} />;
+const Template: ComponentStory<typeof Wrapper> = (args) => <Wrapper {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

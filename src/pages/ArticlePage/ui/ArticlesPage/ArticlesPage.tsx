@@ -15,8 +15,7 @@ import {
     getArticlesIsLoading,
     getArticlesView,
 } from '../../model/selectors/getArticles';
-import { fetchArticles } from '../../model/services/fetchArticles';
-import { articlesPageActions, articlesPageReducer, getArticle } from '../../model/slice/articlesPageSlice';
+import { articlesPageReducer, getArticle } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 

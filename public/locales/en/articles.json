@@ -7,5 +7,10 @@
     "убыванию": "descending",
     "дате": "date",
     "названию": "title",
-    "просмотрам": "views"
+    "просмотрам": "views",
+    "Статьи не найдены": "Articles not found",
+    "Все": "All",
+    "Айти": "IT",
+    "Библиотеки": "Libraries",
+    "Технологий": "Technologies"
 }

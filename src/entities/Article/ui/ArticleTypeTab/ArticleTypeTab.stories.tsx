@@ -1,17 +1,17 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { ArticleSort } from './ArticleSort';
+import { ArticleTypeTab } from './ArticleTypeTab';
 
 export default {
-    title: 'pages/ArticleSort',
-    component: ArticleSort,
+    title: 'pages/ArticleTypeTab',
+    component: ArticleTypeTab,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticleSort>;
+} as ComponentMeta<typeof ArticleTypeTab>;
 
-const Template: ComponentStory<typeof ArticleSort> = (args) => <ArticleSort {...args} />;
+const Template: ComponentStory<typeof ArticleTypeTab> = (args) => <ArticleTypeTab {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

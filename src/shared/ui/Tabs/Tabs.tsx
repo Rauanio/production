@@ -1,8 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { ReactNode, memo } from 'react';
+import { ReactNode, memo, useCallback } from 'react';
 import cls from './Tabs.module.scss';
-import { Card } from '../Card/Card';
+import { Card, CardTheme } from '../Card/Card';
 
 export interface TabItem {
     value: string
@@ -17,10 +16,21 @@ export interface TabsProps {
 }
 
 export const Tabs = memo(({ className, tabs, onTabClick, value }: TabsProps) => {
+    const clickHandler = useCallback((tab: TabItem) => {
+        return () => {
+            onTabClick(tab);
+        };
+    }, [onTabClick]);
+
     return (
         <div className={classNames(cls.tabs, {}, [className])}>
             {tabs.map((tab) => (
-                <Card key={tab.value}>
+                <Card
+                    theme={tab.value === value ? CardTheme.OUTLINED : CardTheme.DEFAULT}
+                    key={tab.value}
+                    onClick={clickHandler(tab)}
+                    className={cls.tab}
+                >
                     {tab.content}
                 </Card>
             ))}
