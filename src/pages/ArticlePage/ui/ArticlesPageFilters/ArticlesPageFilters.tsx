@@ -6,6 +6,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Input } from 'shared/ui/Input/Input';
 import { SortOrder } from 'shared/types/sort';
+import { useDebounce } from 'shared/lib/hooks/useDebounce';
 import { fetchArticles } from '../../model/services/fetchArticles';
 import {
     getArticlesOrder,
@@ -32,6 +33,8 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
         dispatch(fetchArticles({ replace: true }));
     }, [dispatch]);
 
+    const debouncedFetchData = useDebounce(fetchData, 500);
+
     const onChangeView = useCallback((view: ArticleView) => {
         dispatch(articlesPageActions.setView(view));
     }, [dispatch]);
@@ -51,8 +54,8 @@ export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps
     const onChangeSearch = useCallback((search: string) => {
         dispatch(articlesPageActions.setSearch(search));
         dispatch(articlesPageActions.setPage(1));
-        fetchData();
-    }, [dispatch, fetchData]);
+        debouncedFetchData();
+    }, [dispatch, debouncedFetchData]);
 
     return (
         <div className={classNames(cls.articlesPageFilters, {}, [className])}>

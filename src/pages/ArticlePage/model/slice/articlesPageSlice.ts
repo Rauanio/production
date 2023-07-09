@@ -32,6 +32,7 @@ const articlesPageSlice = createSlice({
         search: '',
         sort: ArticleSortField.TITLE,
         _inited: false,
+        limit: 9,
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
@@ -72,7 +73,7 @@ const articlesPageSlice = createSlice({
                 action,
             ) => {
                 state.isLoading = false;
-                state.hasMore = action.payload.length > 0;
+                state.hasMore = action.payload.length >= state.limit;
 
                 if (action.meta.arg.replace) {
                     articlesAdapter.setAll(state, action.payload);

@@ -8,6 +8,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import { Wrapper } from 'widgets/Wrapper/Wrapper';
 import { fetchNextArticles } from 'pages/ArticlePage/model/services/fetchNextArticles';
 import { initArticles } from 'pages/ArticlePage/model/services/initArticles';
+import { useSearchParams } from 'react-router-dom';
 import {
     getArticlesError,
     getArticlesInited,
@@ -33,9 +34,10 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const error = useSelector(getArticlesError);
     const isLoading = useSelector(getArticlesIsLoading);
     const view = useSelector(getArticlesView);
+    const [searchParams] = useSearchParams();
 
     useInitialEffect(() => {
-        dispatch(initArticles());
+        dispatch(initArticles(searchParams));
     });
 
     const onLoadNextPage = useCallback(() => {
