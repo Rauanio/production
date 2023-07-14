@@ -77,6 +77,12 @@
       "userId": "1",
       "text": "vava popa",
       "id": "O5Dm3H5"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "i love react query?",
+      "id": "lWfU4_6"
     }
   ],
   "articles": [
@@ -252,7 +258,7 @@
     {
       "id": "4",
       "title": "React js",
-      "userId": "1",
+      "userId": "2",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://code-dev.fb.com/wp-content/uploads/2017/09/gd6howhhcsnjy7ceaaaaaadduae0bj0jaaab.jpg",
       "views": 500,

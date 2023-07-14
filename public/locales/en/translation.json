@@ -16,5 +16,6 @@
     "Ошибка при авторизаций": "You entered the wrong username or password",
     "Выйти": "Logout",
     "Профиль": "Profile",
-    "Статьи": "Articles"
+    "Статьи": "Articles",
+    "Создать": "Create"
 }

@@ -5,6 +5,8 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/user';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './Navbar.module.scss';
 
 export interface NavbarProps {
@@ -32,10 +34,20 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     if (authData) {
         return (
             <div className={classNames(cls.Navbar, {}, [className])}>
+                <AppLink
+                    to={RoutePath.article_create}
+                    className={cls.createBtn}
+                >
+                    <Button
+                        theme={ThemeButton.OUTLINE}
+                    >
+                        {t('Создать')}
+                    </Button>
+                </AppLink>
                 <Button
-                    theme={ThemeButton.OUTLINE}
+                    theme={ThemeButton.OUTLINE_RED}
                     onClick={onLogout}
-                    className={cls.links}
+                    className={cls.logoutBtn}
                 >
                     {t('Выйти')}
                 </Button>
