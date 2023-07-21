@@ -19,6 +19,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'path-control',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -29,6 +30,7 @@ module.exports = {
         }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
+        'path-control/fsd-path': 'error',
         'react/react-in-jsx-scope': 'off',
         'react/no-array-index-key': 'off',
         'linebreak-style': 'off',

@@ -6,9 +6,9 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader';
 import { Wrapper } from 'widgets/Wrapper/Wrapper';
-import { fetchNextArticles } from 'pages/ArticlePage/model/services/fetchNextArticles';
-import { initArticles } from 'pages/ArticlePage/model/services/initArticles';
 import { useSearchParams } from 'react-router-dom';
+import { initArticles } from '../../model/services/initArticles';
+import { fetchNextArticles } from '../../model/services/fetchNextArticles';
 import {
     getArticlesError,
     getArticlesInited,

@@ -1,7 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { ArticleBlock, ArticleTextBlock } from 'entities/Article/model/types/article';
 import { Text, TextSize } from 'shared/ui/Text/Text';
+import { ArticleBlock, ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleTextBlockComponent.module.scss';
 
 export interface ArticleTextBlockComponentProps {
