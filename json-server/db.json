@@ -83,6 +83,12 @@
       "userId": "1",
       "text": "i love react query?",
       "id": "lWfU4_6"
+    },
+    {
+      "articleId": "2",
+      "userId": "2",
+      "text": "asf",
+      "id": "J7KSr8X"
     }
   ],
   "articles": [
@@ -537,7 +543,7 @@
       "id": "2",
       "name": "Vasyaa",
       "surname": "Mudegeev",
-      "age": 34,
+      "age": 21,
       "currency": "KZT",
       "country": "Kazakhstan",
       "city": "Pavlodar",

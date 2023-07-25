@@ -11,6 +11,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { AddCommentForm } from 'features/AddCommentForm';
 import { useCallback } from 'react';
 import { Wrapper } from 'widgets/Wrapper/Wrapper';
+import { ArticleRecommendationList } from 'features/ArticleRecommendationList';
 import { articleDetailsPageReducer } from '../../model/slice';
 import { getArticleRecommendationIsLoading } from '../../model/selectors/getArticleRecommendation';
 import { fetchArticlesRecommendation } from '../../model/services/fetchArticlesRecommendation';
@@ -23,6 +24,7 @@ import { getArticleCommentsIsLoading } from '../../model/selectors/getArticleCom
 import { getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
 import cls from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 
 export interface ArticleDetailsPageProps {
     className?: string;
@@ -35,21 +37,6 @@ const reducers: ReducersList = {
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article_details');
     const { id } = useParams<{id: string}>();
-    const dispatch = useAppDispatch();
-
-    const comments = useSelector(getArticleComments.selectAll);
-    const isLoading = useSelector(getArticleCommentsIsLoading);
-    const recommendation = useSelector(getArticleRecommendation.selectAll);
-    const isLoadingRecommendation = useSelector(getArticleRecommendationIsLoading);
-
-    const onSendComment = useCallback((text: string) => {
-        dispatch(addCommentForArticle(text));
-    }, [dispatch]);
-
-    useInitialEffect(() => {
-        dispatch(fetchCommentsByArticleId(id));
-        dispatch(fetchArticlesRecommendation());
-    });
 
     if (!id) {
         return (
@@ -64,24 +51,8 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
             <Wrapper className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
-                <Text
-                    className={cls.recommendation}
-                    title={t('Рекомендуем')}
-                />
-                <ArticleList
-                    articles={recommendation}
-                    isLoading={isLoadingRecommendation}
-                    target="_blank"
-                />
-                <Text
-                    title={t('Комментарий')}
-                    className={cls.commentTitle}
-                />
-                <AddCommentForm onSendComment={onSendComment} />
-                <CommentList
-                    isLoading={isLoading}
-                    comments={comments}
-                />
+                <ArticleRecommendationList />
+                <ArticleDetailsComments id={id} />
             </Wrapper>
         </DynamicModuleLoader>
 
