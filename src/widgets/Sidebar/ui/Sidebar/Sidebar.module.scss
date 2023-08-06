@@ -17,15 +17,6 @@
     width: 100%;
 }
 
-.theme {
-    transition: transform 0.5s, fill 0.5s;
-
-    &:hover {
-        fill: var(--accent-color);
-        transform: scale(1.2);
-    }
-}
-
 .lang {
     margin-left: 20px;
 }
@@ -55,6 +46,7 @@
     .switchers {
         flex-direction: column;
         align-items: center;
+        gap: 5px;
     }
 
     .lang {
