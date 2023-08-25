@@ -62,8 +62,6 @@ module.exports = {
                 'border',
                 'target',
                 'as',
-                'feedbackTitle',
-                'title',
             ],
         }],
         'max-len': ['error', {

@@ -16,14 +16,15 @@ export interface RatingCardProps {
     hasFeedback?: boolean
     onCancel?: (starsCount: number) => void
     onAccept?: (starsCount: number, feedback?: string) => void
+    rate?: number
 }
 
 export const RatingCard = memo((props: RatingCardProps) => {
-    const { className, feedbackTitle, hasFeedback, onAccept, onCancel, title } = props;
+    const { className, feedbackTitle, hasFeedback, onAccept, onCancel, title, rate = 0 } = props;
     const [isModalOpen, setIsModalOpen] = React.useState(false);
-    const [starsCount, setStarsCount] = React.useState(0);
+    const [starsCount, setStarsCount] = React.useState(rate);
     const [feedback, setFeedback] = React.useState('');
-    const { t } = useTranslation();
+    const { t } = useTranslation('article_details');
 
     const onSelectStars = useCallback((selectedStarsCount: number) => {
         setStarsCount(selectedStarsCount);
@@ -46,8 +47,8 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
     return (
         <Card className={classNames(cls.ratingCard, {}, [className])}>
-            <Text title={title} />
-            <StarRating className={cls.stars} onSelect={onSelectStars} size={40} />
+            <Text title={starsCount ? t('Спасибо за оценку!') : title} />
+            <StarRating selectedStars={starsCount} className={cls.stars} onSelect={onSelectStars} size={40} />
             <Modal isOpen={isModalOpen} lazy>
                 <Text title={feedbackTitle} className={cls.feedback} />
                 <Input value={feedback} onChange={setFeedback} placeholder={t('Напишите отзыв')} />

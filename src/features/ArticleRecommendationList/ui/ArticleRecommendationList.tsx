@@ -27,7 +27,7 @@ const recommendationsApi = rtkApi.injectEndpoints({
 export const { useGetArticleRecommendationsQuery } = recommendationsApi;
 
 export const ArticleRecommendationList = memo(({ className }: ArticleRecommendationListProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('article_details');
     const { data: articles, isLoading, error } = useGetArticleRecommendationsQuery(3);
 
     // console.log(data);

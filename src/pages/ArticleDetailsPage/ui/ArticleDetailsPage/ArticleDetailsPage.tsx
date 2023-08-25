@@ -12,6 +12,7 @@ import { AddCommentForm } from 'features/AddCommentForm';
 import { useCallback } from 'react';
 import { Wrapper } from 'widgets/Wrapper/Wrapper';
 import { ArticleRecommendationList } from 'features/ArticleRecommendationList';
+import { ArticleRating } from 'features/ArticleRating';
 import { articleDetailsPageReducer } from '../../model/slice';
 import { getArticleRecommendationIsLoading } from '../../model/selectors/getArticleRecommendation';
 import { fetchArticlesRecommendation } from '../../model/services/fetchArticlesRecommendation';
@@ -51,6 +52,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
             <Wrapper className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
+                <ArticleRating articleId={id} />
                 <ArticleRecommendationList />
                 <ArticleDetailsComments id={id} />
             </Wrapper>
