@@ -1,31 +1,13 @@
-.dropdown {
+.popup {
     position: relative;
 }
 
-.btn {
+.trigger {
     background: none;
     outline: none;
     border: none;
     margin: 0;
     padding: 0;
-    cursor: pointer;
-}
-
-.menu {
-    position: absolute;
-    z-index: 10000;
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-    background: var(--bg-card);
-}
-
-.item {
-    padding: 10px 25px;
-    border: none;
-    width: 100%;
-    background: none;
-    outline: none;
-    color: var(--primary-color);
     cursor: pointer;
 }
 

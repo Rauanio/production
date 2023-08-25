@@ -7,8 +7,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/user';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Dropdown } from 'shared/ui/Popup/ui/Dropdown/Dropdown';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { Icon } from 'shared/ui/Icon/Icon';
+import NotificationIcon from 'shared/assets/icons/notification.svg';
+import { Popover } from 'shared/ui/Popup';
+import { NotificationList } from 'entities/Notification';
 import cls from './Navbar.module.scss';
 
 export interface NavbarProps {
@@ -36,31 +40,33 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     if (authData) {
         return (
             <div className={classNames(cls.Navbar, {}, [className])}>
-                <AppLink
-                    to={RoutePath.article_create}
-                    className={cls.createBtn}
-                >
-                    <Button
-                        theme={ThemeButton.OUTLINE}
+                <div className={cls.links}>
+                    <Popover
+                        direction="bottom left"
+                        trigger={(
+                            <Button theme={ThemeButton.CLEAR}>
+                                <Icon className={cls.icon} Svg={NotificationIcon} />
+                            </Button>
+                        )}
                     >
-                        {t('Создать')}
-                    </Button>
-                </AppLink>
-                <Dropdown
-                    direction="bottom left"
-                    className={cls.dropdown}
-                    trigger={<Avatar size={40} src={authData.avatar} />}
-                    items={[
-                        {
-                            content: t('Профиль'),
-                            href: RoutePath.profile + authData.id,
-                        },
-                        {
-                            content: t('Выйти'),
-                            onClick: onLogout,
-                        },
-                    ]}
-                />
+                        <NotificationList className={cls.notifications} />
+                    </Popover>
+                    <Dropdown
+                        direction="bottom left"
+                        className={cls.dropdown}
+                        trigger={<Avatar size={50} src={authData.avatar} />}
+                        items={[
+                            {
+                                content: t('Профиль'),
+                                href: RoutePath.profile + authData.id,
+                            },
+                            {
+                                content: t('Выйти'),
+                                onClick: onLogout,
+                            },
+                        ]}
+                    />
+                </div>
 
             </div>
         );

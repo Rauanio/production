@@ -11,6 +11,40 @@
       "userId": 2
     }
   ],
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Уведомление 1",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Уведомление 2",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Уведомление 3",
+      "description": "Произошло какое-то событие",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Уведомление 4",
+      "description": "Произошло какое-то событие",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Уведомление 5",
+      "description": "Произошло какое-то событие",
+      "userId": "2"
+    }
+  ],
   "comments": [
     {
       "id": "1",
@@ -100,9 +134,7 @@
       "img": "https://yt3.ggpht.com/ytc/AAUvwnhKwOuCqaYgI52PIs1hz1JN_9Iz7NZfECu_FE-YMQ=s900-c-k-c0x00ffffff-no-rj",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -172,9 +204,7 @@
       "img": "https://feature-sliced.design/img/blog/rebranding-stable.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "TECHNOLOGY"
-      ],
+      "type": ["TECHNOLOGY"],
       "blocks": [
         {
           "id": "1",
@@ -244,10 +274,7 @@
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
       "views": 705,
       "createdAt": "26.06.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -269,10 +296,7 @@
       "img": "https://code-dev.fb.com/wp-content/uploads/2017/09/gd6howhhcsnjy7ceaaaaaadduae0bj0jaaab.jpg",
       "views": 500,
       "createdAt": "26.02.2021",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -294,9 +318,7 @@
       "img": "https://haitran1999.github.io/My-website/images/ExpressJS%20(1).jpg",
       "views": 902,
       "createdAt": "26.02.2019",
-      "type": [
-        "LIBRARY"
-      ],
+      "type": ["LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -318,10 +340,7 @@
       "img": "https://storage.needpix.com/rsynced_images/logo-2582748_1280.png",
       "views": 1609,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -343,10 +362,7 @@
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -368,10 +384,7 @@
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -393,10 +406,7 @@
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -418,10 +428,7 @@
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -443,10 +450,7 @@
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -468,10 +472,7 @@
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",
@@ -493,10 +494,7 @@
       "img": "https://pbs.twimg.com/media/FaiLR7LXoAAJi7w?format=jpg&name=medium",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT",
-        "LIBRARY"
-      ],
+      "type": ["IT", "LIBRARY"],
       "blocks": [
         {
           "id": "1",

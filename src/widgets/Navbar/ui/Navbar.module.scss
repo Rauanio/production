@@ -4,19 +4,29 @@
     background: var(--bg-color);
     display: flex;
     align-items: center;
-    padding: 35px 10px 35px 0;
+    padding: 40px 10px 35px 0;
     border: 1px groove var(--border-color);
 }
 
-.createBtn {
+.links {
+    display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: 10px;
 }
 
-.links {
-    margin-left: auto;
+.icon {
+    width: 30px;
+    margin-right: 10px;
 }
 
 .mainLink {
     margin-right: 15px;
+}
+
+.notifications {
+    width: 350px;
+    min-height: 150px;
+    max-height: 250px;
+    overflow-y: auto;
 }

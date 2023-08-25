@@ -27,7 +27,7 @@ const reducers: ReducersList = {
 };
 
 export const EditableProfileCard = memo(({ id }: EditableProfileCardProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
     const error = useSelector(getProfileError);
